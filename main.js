@@ -20,7 +20,7 @@ function take_snapshot() {
 }
 console.log('ml5 version: ', ml5.version);
 
-classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/5mxzZHkpx',modelLoaded);
+classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/TStLEfYcu/model.json',modelLoaded);
 
 function modelLoaded() {
     console.log("model loaded");
@@ -51,7 +51,7 @@ else {
     prediction_2 = results[1].label;
     speak();
 
-    if (results[0].label = "Angry") {
+    if (results[0].label = "Surprised") {
         document.getElementById("update_emoji").innerHTML = "&#128558;";
     }
     
@@ -63,7 +63,7 @@ else {
         document.getElementById("update_emoji").innerHTML = "&#128532;";
     }
 
-    if (results[1].label = "Angry") {
+    if (results[1].label = "Surprised") {
         document.getElementById("update_emoji2").innerHTML = "&#128558;";
     }
     
